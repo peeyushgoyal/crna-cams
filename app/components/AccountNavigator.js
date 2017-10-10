@@ -1,16 +1,17 @@
+import AccountDetailScreen from '../screens/AccountDetailScreen';
+import AccountListMapViewScreen from '../screens/AccountListMapViewScreen';
+import AccountListScreen from '../screens/AccountListScreen';
+import CustomerDetailScreen from '../screens/CustomerDetailScreen';
 import React from 'react';
 import { StackNavigator } from 'react-navigation';
-
-import AccountListScreen from '../screens/AccountListScreen';
-import AccountListMapViewScreen from '../screens/AccountListMapViewScreen';
-import AccountDetailScreen from '../screens/AccountDetailScreen';
 import { screenChange } from '../utils/analytics';
 
 const AccountStackNavigator = StackNavigator(
   {
     accountList: { screen: AccountListScreen },
     accountListMap: { screen: AccountListMapViewScreen },
-    accountDetail: { screen: AccountDetailScreen }
+    accountDetail: { screen: AccountDetailScreen },
+    customerDetail: { screen: CustomerDetailScreen }
   },
   {
     mode: 'modal',

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import { Button, Linking, Text, View } from 'react-native';
+import React, { Component } from 'react';
 import { phonecall, text } from 'react-native-communications';
 
 import styles from '../styles';
@@ -34,6 +34,10 @@ export default class AccountDetailScreen extends Component {
             );
           }}
         />
+        <Button
+        title="Customer"
+        onPress={() => { this.props.navigation.navigate('customerDetail', { account: account}); }}
+      />
       </View>
     );
   }

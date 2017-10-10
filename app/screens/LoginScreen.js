@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
 import { Button, View } from 'react-native';
-import { connect } from 'react-redux';
-import { Ionicons } from '@expo/vector-icons';
+import React, { Component } from 'react';
 
-import { userLoginSuccess } from '../actions';
+import { Ionicons } from '@expo/vector-icons';
+import { connect } from 'react-redux';
 import styles from '../styles';
+import { userLoginSuccess } from '../actions';
 
 async function loginByGoogle() {
   try {
@@ -24,7 +24,8 @@ async function loginByGoogle() {
           accessToken: result.accessToken,
           fullName: result.user.name,
           email: result.user.email,
-          photoUrl: result.user.photoUrl
+          photoUrl: result.user.photoUrl,
+          userId: result.user.id
         }
       };
     } else {
